@@ -1,0 +1,70 @@
+{{>header}}
+
+<br />
+<br />
+<br />
+<div class="ui container">
+    <div class="ui segment">
+        <div class="ui breadcrumb">
+            <a href="/" class="section">Home</a>
+            <i class="right chevron icon divider"></i>
+            <div class="active section">Kepala Keluarga</div>
+        </div>
+    </div>
+
+    <div class="ui segment">
+        <div class="header">
+            <h4><i class="icon user"></i> DATA KEPALA KELUARGA</h4>
+        </div>
+        <hr />
+
+        <form class="ui form" method="GET" action="/">
+            <div class="field">
+                <div class="fields">
+                    <div class="six wide field">
+                        <a href="/" class="ui button primary"><i class="icon plus circle"></i> Tambah Data Baru</a>
+                    </div>
+                    <div class="ten wide field">
+                        <input type="text" name="nama_kk" autocomplete="off" placeholder="Cari Data Berdasarkan Nama">
+                    </div>
+                    <div class="two wide field">
+                        <input type="submit" class="ui button success" value="Temukan">
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <table class="small ui yellow celled table">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nomor Kartu Keluarga</th>
+                    <th>Nama Kepala Keluarga</th>
+                    <!--<th>Suku</th>!-->
+                    <th>RT / RW</th>
+                    <th>Kampung</th>
+                    <!-- <th>Jumlah Anggota Keluarga</th> -->
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each fams}}
+                <tr>
+                    <td>{{no_urut_kk}}</td>
+                    <td>{{no_kk}}</td>
+                    <td>{{nama_kk}}</td>
+                    <td>{{rt}} / {{rw}}</td>
+                    <td>{{kampung}}</td>
+                    <td>
+
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<br />
+
+{{>footer}}
